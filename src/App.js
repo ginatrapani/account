@@ -37,7 +37,7 @@ const textVars = textFiles.reduce(
 
 function App() {
   let { page } = useParams();
-  if (!textVars[page]) return <Redirect to="/soda" />;
+  if (!textVars[page]) return <Redirect to="/fire" />;
   const [ast, astState, rawText] = textVars[page];
 
   return (
