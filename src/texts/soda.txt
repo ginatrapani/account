@@ -1,4 +1,6 @@
-:cup_with_straw: You drink {1-4:sodas_daily} Diet Cokes per day, at a cost of ${0.00-3.50:soda_cost} per Diet Coke. (${=sodas_daily * soda_cost * 365.25/12:monthly} a month). If you'd put that into a fund with a {6.00:rate}% annual rate, you'd have
+:cup_with_straw: You drink {1-4:sodas_daily} Diet Cokes per day, at a cost of ${0.00-3.50:soda_cost} per Diet Coke. (That's ${=sodas_daily * soda_cost * 365.25/12:monthly} a month. :money_with_wings: )
+
+If you put that into a fund with a {6.00:rate}% annual rate of return :chart_with_upwards_trend:, you'd have
 ${=
 	t = 12;
 	period = 10 * t;
@@ -8,6 +10,5 @@ ${=
 	adjusted = interest/t;
 
 	monthly * ((((1 + adjusted)^period) - 1) / adjusted)
-
-:total} in a decade.
+:total} in a decade. :money_mouth:
 
