@@ -78,6 +78,22 @@ Exp.functions.monthsToGoalBalanceViaCompoundInterest = function (
   return monthsPassed;
 };
 
+// With compounding interest, calculate future value of principal
+// Given a start balance and an annual interest rate
+// Also make it readable
+Exp.functions.compoundInterestAnnually = function (principal, apy, years) {
+  // Coerce to Numbers
+  var balance = Number(principal);
+  var annualRate = Number(apy) / 100;
+  var totalYears = Number(years);
+  var currentYears = 0;
+  while (currentYears < totalYears) {
+    balance += balance * annualRate;
+    currentYears++;
+  }
+  return balance;
+};
+
 // Same as above, but we don't know value yet
 function makeExpression(parseResult, kind) {
   const [expression, variable] = parseResult;
