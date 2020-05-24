@@ -1,0 +1,5 @@
+:flag-us: In the U.S., many employers match employee contributions to their 401(k) retirement plan :older_adult: up to a certain percentage.
+
+Say you earn ${50000:salary} annually :dollar: and your employer matches your 401(k) contributions up to {4:pctmatch}% :bank:. If you contribute at least that much, your employer will pay you ${=salary*(pctmatch/100):compmatch} more this year. :moneybag:
+
+:bulb: The 401(k) employee contribution limit in 2020 is $19,500.

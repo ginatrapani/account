@@ -1,0 +1,5 @@
+:flag-us: In the U.S., traditional 401(k) contributions are deducted pre-tax :muscle: meaning that the contributions you make lower your taxable income. :chart_with_downwards_trend:
+
+If you're in the {33:taxbracket}% tax bracket :bar_chart: and you contribute ${10000:contribution} to your traditional 401(k), you'll owe ${=contribution*(taxbracket/100):saved} less income tax this year. :moneybag:
+
+:bulb: The 401(k) employee contribution limit in 2020 is $19,500.
