@@ -1,7 +1,5 @@
 # Account: A tiny tool for accounts that account!
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0ccc4ad6-ff9f-472a-b1e8-41dd333a6c02/deploy-status)](https://app.netlify.com/sites/account-account/deploys)
-
 [Postlight](https://postlight.com)'s Account is a markup format for making web pages like this:
 
 ![An animated gif of a demo of this code.](./doc/soda-demo-cropped.gif)
@@ -50,40 +48,40 @@ within a decade. :+1:
 
 That's the formula for compound interest I got off some website. I'm sure I screwed something up. Pull requests welcomed.
 
-Notice that newlines don't really matter. They're not real and they can't hurt you. If you want to include spacing between lines you can't. Paragraphs were a wasteful orthographic indulgence by lazy monks and we don't allow them here.
-
 ## What it does
 
 - Reads a text file, and by text I mean text.
-- Respects emojis between ```:``` colons like ```:+1:```.
+- Respects emojis between `:` colons like `:+1:`.
 - Respects two special bracketing formats:
-   1. ```{[single number or range]:[variable name]}```
-   2. ```{=[expression]:[variable name]}```
+  1.  `{[single number or range]:[variable name]}`
+  2.  `{=[expression]:[variable name]}`
 
 So:
 
-```{10-20:wholes} wholes is {=wholes * 2:halves} halves.```
+`{10-20:wholes} wholes is {=wholes * 2:halves} halves.`
 
 Yields:
 
-> ```=O=``` 15 wholes is *20* halves.
+> `=O=` 15 wholes is _20_ halves.
 
-- (Where ```=O=``` is a ```<input type="range"/>``` slider in HTML5.) And when you move the slider around the numbers change. Whoo hoo!
+- (Where `=O=` is a `<input type="range"/>` slider in HTML5.) And when you move the slider around the numbers change. Whoo hoo!
 - Numbers are just numbers, and can be negative (currently only on the left-hand-side of a statement, sorry!) or have decimal points.
-- If you use a dollar sign ala ```${100:dollars}``` it will try to format things intelligently.
-- It'll try to keep the number of decimal points steady, i.e. if you type ```{0.00-100.00:rating}``` it'll format the output to the hundredth after the decimal. (Most of that stuff is hacky, YMMV.)
+- If you use a dollar sign ala `${100:dollars}` it will try to format things intelligently.
+- It'll try to keep the number of decimal points steady, i.e. if you type `{0.00-100.00:rating}` it'll format the output to the hundredth after the decimal. (Most of that stuff is hacky, YMMV.)
 
 ## Under the hood
 
 I run a software firm which means I'm an executive programmer: I did very little and delegated all the hard work to libraries, while taking all the credit.
 
 ### Mathing
+
 The thing that does the math is [expr-eval](https://github.com/silentmatt/expr-eval), which has most of the regular functions you'd expect and is pretty nice about symbols, and is both fast and reliable after trying a few alternatives.
 
 - The math works like math.
-- You need to declare variables in the order you expect them to be evaluated; i.e. you can't declare ```x``` at the bottom of your document and expect ```x``` to be available at the top.
+- You need to declare variables in the order you expect them to be evaluated; i.e. you can't declare `x` at the bottom of your document and expect `x` to be available at the top.
 
 ### Parsing
+
 The text is parsed by [parsimmon](https://github.com/jneen/parsimmon), which was fun to learn, once I gave up on regular expressions and just accepted that I could concat unmatched text after parse.
 
 ### Formatting
@@ -95,6 +93,7 @@ The numbers are formatted by [numeral.js](http://numeraljs.com/), which does wha
 Note as well the very fine [React Hamburger Menu](https://www.npmjs.com/package/react-hamburger-menu) which gave this site a hamburger menu so that I didn't have to read through five React Hamburger Menu tutorials while cutting-and-pasting the one approach that would work with Router and React hooks 16.8 or greater.
 
 ## Code Notes
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It has yet to be ejected.
 
 If you'd like to run it locally, you can:
@@ -105,14 +104,16 @@ yarn start
 ```
 
 ## Could this be used for evil?
+
 - Yes, if people used it to "prove" things that are nonsense, like a Eugenics calculator about improving the genetic stock of humanity, or a calculator that proved that a certain percentage of humans must be turned into food.
 - C.f. also "How to Lie with Statistics."
 - I'll consider those risks as time passes. Since the only way to publish is to set up a whole new thingy on the web and deploy it, or to issue a pull request, the risk of malice is low.
 - The risk of incompetence is extremely high as always.
 
 ## TODOs
+
 - Math
-  - Some sort of array generator so that you can do sigmas via the ```fold``` inside of the ```expr-eval``` math functions. Maybe you have something like ```{#48:months}``` and that knows to generate an array from ```[n..48]``` that you can then use in sigma functions to calculate IRR or what-have-you.
+  - Some sort of array generator so that you can do sigmas via the `fold` inside of the `expr-eval` math functions. Maybe you have something like `{#48:months}` and that knows to generate an array from `[n..48]` that you can then use in sigma functions to calculate IRR or what-have-you.
 - Interface
   - A charting module, given the above; if I know I'm over 48 months then anyting that interacts with months returns an array, I should be able to drop a chart in there.
   - A way to edit in the browser and save somehow or other. Since it's just ASCII maybe it could be hacked to just save into some simple CMS. It'd be fine except for then needing to set up accounts, and moderate, and do all the other things. Maybe it could just pull live from a Gist. Maybe I'll use some auth service like a young person.
