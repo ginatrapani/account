@@ -116,7 +116,8 @@ const docParser = P.createLanguage({
   // that; it wants hierarchy. Without that, the parser fails and
   // says (most often) that it was expecting EOF.
 
-  Doc: (r) => P.alt(r.DecimalExpression, r.Statement, r.Text).many(),
+  Doc: (r) =>
+    P.alt(r.DecimalExpression, r.Statement, r.Paragraph, r.Text).many(),
 
   Statement: (r) =>
     P.alt(r.DollarStatement, r.PercentageStatement, r.DecimalStatement),
@@ -162,6 +163,9 @@ const docParser = P.createLanguage({
   Math: (r) => P.regexp(/[^:]+/),
 
   Decimal: (r) => P.regexp(/[+-]?[0-9.]+/).map(explainDecimal),
+
+  Paragraph: (r) =>
+    P.newline.times(2).map((x) => ({ type: "paragraph", value: x })),
 
   Text: (r) =>
     P.alt(P.any, P.whitespace).map((x) => ({ type: "text", value: x })),

@@ -53,3 +53,7 @@ button:hover {
 .negative {
   color: red;
 }
+
+div.spacer {
+  height: 0.75em;
+}

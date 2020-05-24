@@ -78,6 +78,9 @@ function Section({ ast, astState, page, rawText }) {
           </span>
         );
 
+      case "paragraph":
+        return <div key={i} className="spacer"></div>;
+
       default:
         return undefined;
     }
