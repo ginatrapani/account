@@ -98,7 +98,7 @@ function Section({ ast, astState, page, rawText }) {
 
   return (
     <div id="text">
-      <h1>{page}</h1>
+      <h1>{page.replace(/-/g, " ")}</h1>
       {ast.map(toComponents)}
       <button onClick={() => setViewSource(!viewSource)}>
         {viewSource ? (
