@@ -16,7 +16,7 @@ function Nav(props) {
           }}
           className="navEl"
         >
-          {k}
+          {k.replace(/-/g, " ")}
         </Link>
       </div>
     );
