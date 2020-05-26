@@ -1,0 +1,5 @@
+:scales: Stocks are a more risky investment than bonds. Over time, your portfolio asset allocation should shift from mostly stocks (when you start working) to mostly bonds (when you are ready to retire). :pie:
+
+:older_adult: Using a simple asset allocation formula, the "100 Minus Your Age" rule, if you are {40:yearsold} years old, your portfolio's asset allocation should be {=100-yearsold:conventionalstockallocation}% stocks and {=100-conventionalstockallocation:conventionalbondallocation}% bonds.
+
+:heavy_minus_sign: Someone more risk-tolerant might opt for the 110 Rule. Their portfolio's asset allocation would be {=110-yearsold:riskerstockallocation}% stocks and {=100-riskerstockallocation:riskerbondallocation}% bonds.
