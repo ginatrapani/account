@@ -1,0 +1,7 @@
+:construction_worker: If your workweek is {40:workhours} hours long and you work {1-52:workweeks} weeks per year...
+
+:timer_clock: At an hourly rate of ${20:hourlyhourlyrate}, your weekly wage is ${=hourlyhourlyrate*workhours:hourlyweeklywages} and your annual income is ${=hourlyweeklywages*workweeks:hourlyyearlywages}.
+
+:clock1: At a weekly wage of ${500:weeklyweeklyrate}, your hourly rate is ${=weeklyweeklyrate/workhours:weeklyhourlywages} and your annual income is ${=weeklyweeklyrate*workweeks:weeklyyearlywages}.
+
+:calendar: At an annual income of ${50000:annualannualrate}, your weekly wage is ${=annualannualrate/workweeks:annualweeklywage} and your hourly rate is ${=annualannualrate/(workweeks*workhours):annualhourlyrate}.
