@@ -1,0 +1,3 @@
+:bank: Your bank is offering a promotion: Deposit ${10000:deposit} and leave it there for {3:months} months, and you receive a ${100:bonus} bonus.
+
+:dollar: You'd get the same return in that amount of time by keeping your money in an account with a {=((bonus/months * 12)*100)/deposit:apy}% annual percentage yield.
