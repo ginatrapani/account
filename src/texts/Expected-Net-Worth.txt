@@ -1,0 +1,5 @@
+:bank: If you are {40:age} years of age and your annual taxable income (minus inheritances) is ${100000:income} :dollar:, then your expected net worth is ${=(age*income)/10:expectednetworth}.
+
+If your actual net worth is ${=expectednetworth*2:wealthynw} or more, you are wealthy. :money_mouth:
+
+:books: Formula derived from The Millionaire Next Door, by Thomas J. Stanley.
