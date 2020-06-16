@@ -1,0 +1,5 @@
+:money_with_wings: Given inflation, money that sits in a no or low-yield cash account (like a regular checking account) loses value.
+
+:dollar: If you keep ${20000:principal} in a savings account :bank: that offers a {1.6:apy}% annual percent yield, in the first month it will earn ${=(principal*(apy/100))/12:monthly}.
+
+ In {5:years} years that interest will compound, and your balance will be ${=compoundInterestAnnually(principal, apy, years):total}, which means it will earn ${=total-principal:earned}. :moneybag:

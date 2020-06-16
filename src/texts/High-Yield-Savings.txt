@@ -1,3 +1,0 @@
-:money_with_wings: Given inflation, money that sits in a no or low-yield cash account (like a regular checking account) loses value.
-
-:dollar: If you keep ${20000:principal} in a savings account that offers a {1.6:apy}% annual percent yield :bank:, in {5:years} years your balance will be ${=compoundInterestAnnually(principal, apy, years):total}. :moneybag:
