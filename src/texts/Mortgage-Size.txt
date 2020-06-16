@@ -1,0 +1,3 @@
+:speech_balloon: "If you're not yet wealthy but want to be someday, never purchase a home that requires a mortgage that is more than twice your household's total annual realized income." - The Millionaire Next Door, by Thomas J. Stanley
+
+:money_with_wings: If your annual taxable income is ${100000:annualincome}, your mortgage shouldn't be larger than ${=annualincome*2:mortgagesize}.
