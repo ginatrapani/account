@@ -1,0 +1,3 @@
+:construction_worker: If your workweek is {40:workhours} hours long and you work {1-52:workweeks} weeks per year...
+
+:calendar: At an annual income of ${50000:annualrate}, your weekly wage is ${=annualrate/workweeks:weeklywage} and your hourly rate is ${=annualrate/(workweeks*workhours):hourlyrate}.
